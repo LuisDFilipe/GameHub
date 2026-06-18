@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  base: '/GameHub/',
   server: {
     port: 3012,
     strictPort: true,
