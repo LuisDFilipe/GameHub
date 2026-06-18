@@ -5,8 +5,8 @@ import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/',
-  //base: '/GameHub/',
+  //base: '/',
+  base: '/GameHub/',
   server: {
     port: 3012,
     strictPort: true,
@@ -26,6 +26,8 @@ export default defineConfig({
         theme_color: '#101010',
         background_color: '#101010',
         display: 'standalone',
+        //id: '/GameHub/',
+        //start_url: '/GameHub/',
         icons: [
           {
             src: 'icon_192.png',
