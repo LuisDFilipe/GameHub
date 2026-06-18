@@ -18,7 +18,7 @@ const router = createRouter({
       },
     },
     {
-      path: '/games',
+      path: '/',
       name: 'games',
       component: GamesView,
       meta: {
@@ -68,7 +68,7 @@ router.beforeEach((to) => {
   }
 
   if (to.name === 'onboarding' && profile) {
-    return '/games'
+    return '/'
   }
 
   return true

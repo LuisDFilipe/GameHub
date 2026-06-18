@@ -9,7 +9,7 @@ const route = useRoute()
 
 const navItems = [
   {
-    to: '/games',
+    to: '/',
     label: 'Jogos',
     icon: 'M4 7h16M4 12h16M4 17h16',
   },

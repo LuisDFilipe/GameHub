@@ -20,7 +20,7 @@ const submitProfile = () => {
     name: name.value.trim(),
     /* dateOfBirth: dateOfBirth.value, */
   })
-  router.push('/games')
+  router.push('/')
   window.location.reload();
 }
 </script>
