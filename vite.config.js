@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig(({ command }) => {
   return {
-    base: command === 'build' ? '/GameHub/' : '/',
+    base: command === 'run' ? '/' : '/GameHub/',
     server: {
       port: 3012,
       strictPort: true,
