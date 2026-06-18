@@ -5,8 +5,8 @@ import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  //base: '/',
-  base: '/GameHub/',
+  base: '/',
+  //base: '/GameHub/',
   server: {
     port: 3012,
     strictPort: true,
@@ -22,11 +22,10 @@ export default defineConfig({
       manifest: {
         name: 'Games Hub',
         short_name: 'Games',
-        description: 'A lightweight mobile-friendly arcade with scores.',
+        description: 'A lightweight mobile-friendly arcade.',
         theme_color: '#101010',
         background_color: '#101010',
         display: 'standalone',
-        start_url: '/',
         icons: [
           {
             src: 'icon_192.png',
