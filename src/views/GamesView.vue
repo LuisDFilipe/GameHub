@@ -60,7 +60,7 @@ const games = [
 
 .hero h2 {
   margin-top: 10px;
-  max-width: 14ch;
+  /* max-width: 14ch; */
   font-size: clamp(2rem, 4vw, 3.1rem);
   font-weight: 800;
 }
