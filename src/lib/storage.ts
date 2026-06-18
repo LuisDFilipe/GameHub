@@ -13,7 +13,8 @@ export function readPlayerProfile(): PlayerProfile | null {
 
   try {
     const profile = JSON.parse(rawProfile) as PlayerProfile
-    if (!profile.name || !profile.dateOfBirth) return null
+    if (!profile.name) return null
+    /* if (!profile.name || !profile.dateOfBirth) return null */
     return profile
   } catch {
     return null

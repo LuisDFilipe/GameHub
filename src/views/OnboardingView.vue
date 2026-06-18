@@ -5,11 +5,12 @@ import { savePlayerProfile } from '@/lib/storage'
 
 const router = useRouter()
 const name = ref('')
-const dateOfBirth = ref('')
+//const dateOfBirth = ref('')
 const touched = ref(false)
 
-const today = new Date().toISOString().slice(0, 10)
-const isValid = computed(() => name.value.trim().length >= 2 && Boolean(dateOfBirth.value))
+/* const today = new Date().toISOString().slice(0, 10) */
+const isValid = computed(() => name.value.trim().length >= 3)
+//const isValid = computed(() => name.value.trim().length >= 3 && Boolean(dateOfBirth.value))
 
 const submitProfile = () => {
   touched.value = true
@@ -17,9 +18,10 @@ const submitProfile = () => {
 
   savePlayerProfile({
     name: name.value.trim(),
-    dateOfBirth: dateOfBirth.value,
+    /* dateOfBirth: dateOfBirth.value, */
   })
   router.push('/games')
+  window.location.reload();
 }
 </script>
 
@@ -27,26 +29,25 @@ const submitProfile = () => {
   <section class="onboarding-view">
     <form class="profile-panel" @submit.prevent="submitProfile">
       <div class="panel-copy">
-        <p class="eyebrow">Arcade profile</p>
-        <h2>Ready when you are.</h2>
-        <p>Scores stay on this device and follow the name you enter here.</p>
+        <h2>Vamos jogar?</h2>
+        <p>As pontuações ficam neste dispositivo e seguem o nome que inseriu.</p>
       </div>
 
       <label class="field">
-        <span>Name</span>
-        <input v-model="name" type="text" autocomplete="name" placeholder="Player name" />
+        <span>Nome</span>
+        <input v-model="name" type="text" autocomplete="name" placeholder="Nome do jogador" />
       </label>
 
-      <label class="field">
+      <!-- <label class="field">
         <span>Date of birth</span>
         <input v-model="dateOfBirth" type="date" :max="today" />
-      </label>
+      </label> -->
 
       <p v-if="touched && !isValid" class="form-error">
-        Enter a name and date of birth to continue.
+        O nome tem de ser válido, pelo menos 3 caracteres.
       </p>
 
-      <button class="primary-button" type="submit">Start playing</button>
+      <button class="primary-button" type="submit">Começa a jogar</button>
     </form>
   </section>
 </template>
@@ -80,7 +81,6 @@ const submitProfile = () => {
   color: #ffb0b0;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 h2 {

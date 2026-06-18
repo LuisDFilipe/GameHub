@@ -1,6 +1,6 @@
 export type PlayerProfile = {
   name: string
-  dateOfBirth: string
+  //dateOfBirth: string
   createdAt: string
 }
 

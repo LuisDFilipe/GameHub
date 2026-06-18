@@ -13,8 +13,8 @@ const router = createRouter({
       name: 'onboarding',
       component: OnboardingView,
       meta: {
-        title: 'Player Setup',
-        description: 'Enter your name and date of birth to start playing.',
+        title: 'Perfil de Jogador',
+        description: 'Diz-nos o teu nome.',
       },
     },
     {
